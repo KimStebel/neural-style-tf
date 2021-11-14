@@ -404,6 +404,7 @@ def sum_masked_style_losses(sess, net, style_imgs):
   return total_style_loss
 
 def sum_style_losses(sess, net, style_imgs):
+  print("running style loss")
   total_style_loss = 0.
   weights = args.style_imgs_weights
   for img, img_weight in zip(style_imgs, weights):
