@@ -418,7 +418,7 @@ def sum_style_losses(sess, net, style_imgs):
       style_loss_in_layer = style_layer_loss(a, x) * weight
       print("test")
       print("style loss in layer ", layer, " is ", style_loss_in_layer)
-      with tf.control_dependencies([tf.print(style_loss_in_layer, output_stream=sys.stdout)]):
+      with tf.control_dependencies([tf.print(style_loss_in_layer)]):
         style_loss += style_loss_in_layer
     style_loss /= float(len(args.style_layers))
     total_style_loss += (style_loss * img_weight)
