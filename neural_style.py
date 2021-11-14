@@ -413,7 +413,8 @@ def sum_style_losses(sess, net, style_imgs):
       a = sess.run(net[layer])
       x = net[layer]
       a = tf.convert_to_tensor(a)
-      style_loss_in_layer = style_layer_loss(a, x) * weight 
+      style_loss_in_layer = style_layer_loss(a, x) * weight
+      print("test")
       print("style loss in layer ", layer, " is ", style_loss_in_layer)
       style_loss += style_loss_in_layer
     style_loss /= float(len(args.style_layers))
