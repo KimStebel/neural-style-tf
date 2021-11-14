@@ -7,6 +7,7 @@ import errno
 import time                       
 import cv2
 import os
+import sys
 
 '''
   parsing and configuration
